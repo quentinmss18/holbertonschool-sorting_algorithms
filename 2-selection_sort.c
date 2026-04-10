@@ -6,7 +6,7 @@
  * @array: The array to be sorted.
  * @size: The size of the array.
  *
- * Description: Prints the array after each time two elements are swapped.
+ * Description: Prints the array after each swap.
  */
 void selection_sort(int *array, size_t size)
 {
@@ -16,11 +16,10 @@ void selection_sort(int *array, size_t size)
 	if (array == NULL || size < 2)
 		return;
 
-  for (i = 0; i < size - 1; i++)
+	for (i = 0; i < size - 1; i++)
 	{
 		min_idx = i;
-
-    for (j = i + 1; j < size; j++)
+		for (j = i + 1; j < size; j++)
 		{
 			if (array[j] < array[min_idx])
 				min_idx = j;
